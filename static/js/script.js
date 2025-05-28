@@ -97,7 +97,7 @@ function hesapla() {
         } else {
             // Başarılıysa sonucu göster
             currentInput = data.sonuc;
-            shouldResetDisplay = true; // Sonraki girişte ekranı sıfırla
+            shouldResetDisplay = false; // Sonraki girişte ekranı sıfırla
             updateDisplay();
             console.log('Hesaplama başarılı:', data.sonuc);
         }
