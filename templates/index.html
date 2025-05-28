@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Hesap Makinesi</title>
+    <!-- CSS dosyamızı bağlıyoruz -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Ana konteyner -->
+    <div class="container">
+        <!-- Başlık -->
+        <h1>🪟 Web Hesap Makinesi</h1>
+        
+        <!-- Hesap makinesi kartı -->
+        <div class="calculator-card">
+            <!-- Ekran -->
+            <div class="display">
+                <input type="text" id="display" readonly value="0">
+            </div>
+            
+            <!-- Butonlar -->
+            <div class="buttons">
+                <!-- İlk sıra: Temizle, geri al, işlem -->
+                <button class="btn btn-clear" onclick="temizle()">C</button>
+                <button class="btn btn-clear" onclick="geriAl()">←</button>
+                <button class="btn btn-operator" onclick="ekle('/')">/</button>
+                <button class="btn btn-operator" onclick="ekle('*')">×</button>
+                
+                <!-- Sayı butonları ve işlemler -->
+                <button class="btn btn-number" onclick="ekle('7')">7</button>
+                <button class="btn btn-number" onclick="ekle('8')">8</button>
+                <button class="btn btn-number" onclick="ekle('9')">9</button>
+                <button class="btn btn-operator" onclick="ekle('-')">-</button>
+                
+                <button class="btn btn-number" onclick="ekle('4')">4</button>
+                <button class="btn btn-number" onclick="ekle('5')">5</button>
+                <button class="btn btn-number" onclick="ekle('6')">6</button>
+                <button class="btn btn-operator" onclick="ekle('+')">+</button>
+                
+                <button class="btn btn-number" onclick="ekle('1')">1</button>
+                <button class="btn btn-number" onclick="ekle('2')">2</button>
+                <button class="btn btn-number" onclick="ekle('3')">3</button>
+                <button class="btn btn-equals" onclick="hesapla()" rowspan="2">=</button>
+                
+                <button class="btn btn-number btn-zero" onclick="ekle('0')">0</button>
+                <button class="btn btn-number" onclick="ekle('.')">.</button>
+            </div>
+            
+            <!-- Hata mesajları için alan -->
+            <div id="error-message" class="error-message"></div>
+        </div>
+        
+        <!-- Alt bilgi -->
+        <div class="footer">
+            <p>Web server üzerinde çalışıyor 🚀</p>
+        </div>
+    </div>
+    
+    <!-- JavaScript dosyamızı bağlıyoruz -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
