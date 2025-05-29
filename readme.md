@@ -16,7 +16,7 @@ Python (Flask) ile geliştirilmiş, modern arayüze sahip ve Raspberry Pi dahil 
 
 1. **Depoyu klonlayın:**
    ```sh
-   git clone https://github.com/kullanici_adiniz/web_server_calculator.git
+   git clone https://github.com/Piko89/web_server_calculator.git
    cd web_server_calculator
    ```
 
@@ -40,13 +40,16 @@ Python (Flask) ile geliştirilmiş, modern arayüze sahip ve Raspberry Pi dahil 
 ## Dosya Yapısı
 
 ```
-app.py              # Flask uygulaması
-start.py            # Otomatik güncelleme ve başlatma scripti
-static/
-  css/style.css     # Stil dosyası
-  js/script.js      # JavaScript dosyası
-templates/
-  index.html        # Ana HTML şablonu
+web_server_calculator/
+├── app.py              # Flask uygulaması
+├── start.py            # Otomatik güncelleme ve başlatma scripti
+├── static/
+│   ├── css/
+│   │   └── style.css   # Stil dosyası
+│   └── js/
+│       └── script.js   # JavaScript dosyası
+└── templates/
+    └── index.html      # Ana HTML şablonu
 ```
 
 ## Kullanım
@@ -61,3 +64,5 @@ templates/
 Ağınızdaki diğer cihazlardan erişmek için Pi'nin IP adresini kullanın:  
 `http://<raspberrypi_ip_adresi>:5000`
 
+## Teşekkür
+Bu projenin geliştirilmesinde Claude, ChatGPT ve GitHub Copilot'un sağladığı yapay zeka destekli öneri ve yardımlardan faydalanılmıştır.
