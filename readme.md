@@ -1,4 +1,4 @@
-# Raspberry Pi Web Hesap Makinesi
+# Web Hesap Makinesi
 
 🧮 Basit, şık ve web tabanlı bir hesap makinesi!  
 Python (Flask) ile geliştirilmiş, modern arayüze sahip ve Raspberry Pi dahil tüm bilgisayarlarda çalışır.
@@ -62,7 +62,7 @@ web_server_calculator/
 ## Raspberry Pi'de Kullanım
 
 Ağınızdaki diğer cihazlardan erişmek için Pi'nin IP adresini kullanın:  
-`http://<raspberrypi_ip_adresi>:5000`
+`http://<cihaz_ip_adresi>:5000`
 
 ## Teşekkür
 Bu projenin geliştirilmesinde Claude, ChatGPT ve GitHub Copilot'un sağladığı yapay zeka destekli öneri ve yardımlardan faydalanılmıştır.
